@@ -1,13 +1,17 @@
-.bold {
-  font-weight: bold;
+#cpu #player #result #top{
+  color:white;
 }
 
-.green {
+#wins{
   color: green;
 }
 
-.purple {
-  color: purple;
+#losses{
+  color: red;
+}
+
+#ties{
+  color: blue;
 }
 
 .arial {
@@ -26,5 +30,5 @@
 
 body {
   text-align: center;
-  background-image: url("./hypnotize_bg.png");
+  background-image: url("./test.png");
 }
