@@ -25,9 +25,11 @@ function compPick() {
 
 win = (answer) => {
     if (answer) {
+        docResult.className = "wins";
         docResult.innerHTML = "Win!";
         wins++;
     } else {
+        docResult.className = "losses";
         docResult.innerHTML = "Lose";
         loss++;
     }
@@ -46,6 +48,7 @@ function logic(user_choice) {
     docCPU.innerHTML = "CPU: " + capFL(cpu);
     docPlayer.innerHTML = "Player: " + capFL(user_choice);
     if (user_choice === cpu) {
+        docResult.className = "ties";
         docResult.innerHTML = "Tie";
         ties++;
     } else {

@@ -1,17 +1,17 @@
-#cpu, #player, #result, #games, #top{
+.cpu, .player, .games, #top{
   color:white;
 }
 
-#wins{
+.wins{
   color: green;
 }
 
-#losses{
+.losses{
   color: red;
 }
 
-#ties{
-  color: blue;
+.ties{
+  color: yellow;
 }
 
 .arial {
