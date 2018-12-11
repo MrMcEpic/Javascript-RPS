@@ -1,20 +1,19 @@
-docResult = document.getElementById("result");
-docGames = document.getElementById("games");
-docWins = document.getElementById("wins");
-docLoss = document.getElementById("losses");
-docTies = document.getElementById("ties");
-docCPU = document.getElementById("cpu");
-docPlayer = document.getElementById("player");
-
-dict = {
-    0: "rock",
-    1: "paper",
-    2: "scissors"
-};
-let wins = 0;
-let ties = 0;
-let loss = 0;
-let games = 0;
+let docResult = document.getElementById("result"),
+    docGames = document.getElementById("games"),
+    docWins = document.getElementById("wins"),
+    docLoss = document.getElementById("losses"),
+    docTies = document.getElementById("ties"),
+    docCPU = document.getElementById("cpu"),
+    docPlayer = document.getElementById("player"),
+    dict = {
+        0: "rock",
+        1: "paper",
+        2: "scissors"
+    },
+    wins = 0,
+    ties = 0,
+    loss = 0,
+    games = 0;
 
 function capFL(string) {
     return string[0].toUpperCase() + string.slice(1);
