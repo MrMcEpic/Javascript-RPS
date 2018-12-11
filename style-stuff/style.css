@@ -20,6 +20,20 @@
   color: white;
 }
 
+.btn{
+  background: crimson;
+  color: black;
+  border: 1px solid currentColor;
+  padding: 3px;
+  margin: 0 5px;
+  font-size: 130%;
+}
+
+.btn:hover{
+  background: transparent;
+  color: crimson;
+}
+
 .cpu, .player, .games, #top{
   color:white;
 }
