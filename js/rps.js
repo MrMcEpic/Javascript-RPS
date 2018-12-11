@@ -1,10 +1,10 @@
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function compPick() {
-    return Math.floor(Math.random() * 3);
-}
+docResult = document.getElementById("result");
+docGames = document.getElementById("games");
+docWins = document.getElementById("wins");
+docLoss = document.getElementById("losses");
+docTies = document.getElementById("ties");
+docCPU = document.getElementById("cpu");
+docPlayer = document.getElementById("player");
 
 dict = {
     0: "rock",
@@ -15,30 +15,39 @@ let wins = 0;
 let ties = 0;
 let loss = 0;
 let games = 0;
+
+function capFL(string) {
+    return string[0].toUpperCase() + string.slice(1);
+}
+
+function compPick() {
+    return Math.floor(Math.random() * 3);
+}
+
 const win = (answer) => {
     if (answer) {
-        document.getElementById("result").innerHTML = "Win!";
+        docResult.innerHTML = "Win!";
         wins++;
     } else {
-        document.getElementById("result").innerHTML = "Lose";
+        docResult.innerHTML = "Lose";
         loss++;
     }
 };
 
 const updates = () => {
-    document.getElementById("games").innerHTML = `Games: ${games}`;
-    document.getElementById("wins").innerHTML = `Wins: ${wins}`;
-    document.getElementById("losses").innerHTML = `Losses: ${loss}`;
-    document.getElementById("ties").innerHTML = `Ties: ${ties}`;
+    docGames.innerHTML = `Games: ${games}`;
+    docWins.innerHTML = `Wins: ${wins}`;
+    docLoss.innerHTML = `Losses: ${loss}`;
+    docTies.innerHTML = `Ties: ${ties}`;
 };
 
 function logic(user_choice) {
     games++;
     cpu = dict[compPick()];
-    document.getElementById("cpu").innerHTML = "CPU: " + capitalizeFirstLetter(cpu);
-    document.getElementById("player").innerHTML = "Player: " + capitalizeFirstLetter(user_choice);
+    docCPU.innerHTML = "CPU: " + capFL(cpu);
+    docPlayer.innerHTML = "Player: " + capFL(user_choice);
     if (user_choice === cpu) {
-        document.getElementById("result").innerHTML = "Tie";
+        docResult.innerHTML = "Tie";
         ties++;
     } else {
         switch (user_choice) {
