@@ -24,7 +24,7 @@ function compPick() {
     return Math.floor(Math.random() * 3);
 }
 
-const win = (answer) => {
+win = (answer) => {
     if (answer) {
         docResult.innerHTML = "Win!";
         wins++;
@@ -34,7 +34,7 @@ const win = (answer) => {
     }
 };
 
-const updates = () => {
+updates = () => {
     docGames.innerHTML = `Games: ${games}`;
     docWins.innerHTML = `Wins: ${wins}`;
     docLoss.innerHTML = `Losses: ${loss}`;
